@@ -5,7 +5,7 @@ public class Employee {
     private String niNumber;
     private Double salary;
 
-    public Employee(String name, String niNumber, double salary) {
+    public Employee(String name, String niNumber, Double salary) {
         this.name = name;
         this.niNumber = niNumber;
         this.salary = salary;
@@ -15,7 +15,7 @@ public class Employee {
         return name;
     }
 
-    public int getNiNumber() {
+    public String getNiNumber() {
         return niNumber;
     }
 
@@ -23,11 +23,11 @@ public class Employee {
         return salary;
     }
 
-    public void raiseSalary(Double increment) {
-        this.salary *= increment;
+    public Double raiseSalary(Double increment) {
+
+        return this.salary *= ((increment/100) + 1);
     }
 
-    //Add a method called payBonus which returns 1% of the employees salary
     public Double payBonus() {
         return (this.salary * 0.01);
     }
