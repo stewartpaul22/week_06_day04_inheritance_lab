@@ -24,8 +24,12 @@ public class Employee {
     }
 
     public Double raiseSalary(Double increment) {
-
-        return this.salary *= ((increment/100) + 1);
+        if (increment > 0) {
+            this.salary *= ((increment/100) + 1);
+        } else {
+            return this.salary;
+        }
+        return this.salary;
     }
 
     public Double payBonus() {

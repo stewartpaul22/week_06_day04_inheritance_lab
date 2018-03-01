@@ -41,4 +41,9 @@ public class DirectorTest {
     public void hasBudget() {
         assertEquals(250000, director.getBudget(), 0.01);
     }
+
+    @Test
+    public void raiseCantBeNegative() {
+        assertEquals(64000.00, director.raiseSalary(-1.00), 0.01);
+    }
 }
