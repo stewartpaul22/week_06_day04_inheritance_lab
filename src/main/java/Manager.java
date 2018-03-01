@@ -7,8 +7,8 @@ public class Manager extends Employee {
         this.deptName = deptName;
     }
 
-//    Add a getter method for deptName.
-
-//    Test all methods including raiseSalary and payBonus
+    public String getDeptName() {
+        return deptName;
+    }
 
 }
